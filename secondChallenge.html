@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>First Challenge</title>
+  </head>
+  <body>
+    <div class="first-Challenge"></div>
+    <script>
+      let body = document.getElementsByClassName("first-Challenge")[0];
+      function deleteAllelemnt() {
+        body.remove();
+        let newBody = document.createElement("div");
+        newBody.classList.add("first-Challenge");
+        document.body.appendChild(newBody);
+        body = document.getElementsByClassName("first-Challenge")[0];
+        addElements();
+      }
+      function addElements() {
+        for (let i = 0; i < 9; i++) {
+          let newBox = document.createElement("div");
+          let text = document.createTextNode(String(i));
+          newBox.style.padding = "50px";
+          newBox.style.display = "block";
+          newBox.style.textAlign = "center";
+          newBox.style.lineHeight = "50px";
+          newBox.style.backgroundColor = `rgb(${Math.random() * 140},${
+            Math.random() * 170
+          },${Math.random() * 170})`;
+          newBox.append(text);
+          body.appendChild(newBox);
+        }
+      }
+      addElements();
+      setInterval(() => {
+        deleteAllelemnt();
+      }, 500);
+    </script>
+  </body>
+</html>

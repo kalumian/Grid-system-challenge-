@@ -1,0 +1,20 @@
+/* First */
+.first-Challenge {
+  background-color: #fff;
+  display: grid;
+  color: white;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3);
+  gap: 5px 5px;
+}
+.first-Challenge div:hover {
+  background-color: black !important;
+  cursor: pointer;
+  transition: 0.4s;
+}
+/* First */
+/* Secondery */
+
+/* Secondery */

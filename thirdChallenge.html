@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .layout {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        color: white;
+        grid-template-areas:
+          "header header header header header header"
+          "section section section section aside aside"
+          "footer footer footer footer footer footer";
+        grid-template-rows: 10% 80% 10%;
+      }
+
+      header {
+        background-color: rgb(97, 97, 97);
+        grid-area: header;
+      }
+      section {
+        background-color: rgb(157, 16, 147);
+        grid-area: section;
+      }
+      aside {
+        background-color: rgb(20, 68, 134);
+        grid-area: aside;
+      }
+      footer {
+        background-color: rgb(62, 182, 46);
+        grid-area: footer;
+      }
+      header::after {
+        content: "Header";
+      }
+      section::after {
+        content: "Section";
+      }
+      aside::after {
+        content: "Aside";
+      }
+      footer::after {
+        content: "Footer";
+      }
+    </style>
+    <title>Third Challenge</title>
+  </head>
+  <body>
+    <div class="layout">
+      <header></header>
+      <section></section>
+      <aside></aside>
+      <footer></footer>
+    </div>
+    <script></script>
+  </body>
+</html>
